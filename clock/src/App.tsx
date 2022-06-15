@@ -1369,7 +1369,7 @@ const StyledButton = styled.button`
   `;
   return (
     <>
-    <h1>Get the Hour by country</h1>
+    <h1>What time it is ?</h1>
       <Autosuggest
         suggestions={country}
         onSuggestionsFetchRequested={({ value }) => {
@@ -1406,17 +1406,23 @@ const StyledButton = styled.button`
       >
         Search
       </StyledButton>
-      {/* <StyledButton
+      <StyledButton
         onClick={() => {
           setCountrySelected({
             name: "",
             timezone_offset: 0,
             latlong: "",
           });
+          setTime({
+            cityDate: "",
+            secondRatio: 0,
+            minuteRatio: 0,
+            hourRatio: 0,
+          });
         }}
       >
         reset
-      </StyledButton> */}
+      </StyledButton>
       
 
       <Clock
